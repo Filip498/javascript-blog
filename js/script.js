@@ -167,10 +167,10 @@ function generateTags(){
     const tagLinksHref = document.querySelectorAll('a[href="' + href + '"]');
   
     /* START LOOP: for each found tag link */
-    for(let tagLinksHref of tagLinksHref){
+    for(let tag of tagLinksHref){
   
       /* add class active */
-      tagLinksHref.classList.add('active');
+      tag.classList.add('active');
   
     /* END LOOP: for each found tag link */
     }
@@ -289,5 +289,3 @@ function addClickListenersToAuthors(){
          generateTitleLinks('[data-authors~="' + author + '"]');
 
     }
-
-    authorClickHandler();
