@@ -38,8 +38,8 @@ function titleClickHandler(event) {
 
     const optArticleSelector = '.post',
       optTitleSelector = '.post-title',
-      optTitleListSelector = '.titles';
-      optArticleTagsSelector = '.post-tags .list';
+      optTitleListSelector = '.titles',
+      optArticleTagsSelector = '.post-tags .list',
       optArticleAuthorSelector = '.post-author';
 
     function generateTitleLinks(customSelector = ''){
@@ -137,7 +137,7 @@ function generateTags(){
 
   function tagClickHandler(event){
     /* prevent default action for this event */
-    event.preventDefault('');
+    event.preventDefault();
   
     /* make new constant named "clickedElement" and give it the value of "this" */
     const clickedElement = this;
@@ -279,10 +279,10 @@ function addClickListenersToAuthors(){
         const authorLinksHref = document.querySelectorAll('a[href="' + href + '"]');
         
         /* START LOOP: for each found author link */
-        for(let authorLinkHref of authorsLinksHref){
+        for (let activeAuthorLinkHref of activeAuthorLinksHref) {
       
           /* add class active */
-          authorLinkHref.classList.add('active');
+          activeAuthorLinkHref.classList.add('active');
         /* END LOOP: for each found author link */
         }
          /* execute function "generateTitleLinks" with article selector as argument */
