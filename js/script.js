@@ -279,10 +279,10 @@ function addClickListenersToAuthors(){
         const authorLinksHref = document.querySelectorAll('a[href="' + href + '"]');
         
         /* START LOOP: for each found author link */
-        for (let activeAuthorLinkHref of activeAuthorLinksHref) {
+        for (let author of authorLinksHref) {
       
           /* add class active */
-          activeAuthorLinkHref.classList.add('active');
+          author.classList.add('active');
         /* END LOOP: for each found author link */
         }
          /* execute function "generateTitleLinks" with article selector as argument */
