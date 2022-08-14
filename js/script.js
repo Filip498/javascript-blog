@@ -97,7 +97,6 @@ function calculateTagsParams(tags) {
     };
 
     for (let tag in tags) {
-        console.log(tag + ' is used ' + tags[tag] + ' times');
         if (tags[tag] > params.max) {
             params.max = tags[tag];
         }
@@ -248,7 +247,6 @@ function calculateAuthorParams(authors) {
     };
 
     for (let authorName in authors) {
-        console.log(authorName + ' is used ' + authors[authorName] + ' times');
         if (authors[authorName] > authorParams.max) {
             authorParams.max = authors[authorName];
         }
@@ -314,6 +312,7 @@ function generateAuthors() {
             allAuthorsData.authors.push({
             author: authorName,
             count: allAuthors[authorName],
+            className: calculateAuthorClass(allAuthors[authorName], authorParams)
           });
 
             /* END LOOP: for every article: */
